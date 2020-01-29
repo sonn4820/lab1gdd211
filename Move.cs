@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class Move : MonoBehaviour
 {
 
-    float runSpeed;
-    float jumpForce;
+    float runSpeed; // player's speed
+    float jumpForce; // player's jumpforce
     Animator myAnimator;
-    public bool grounded = true;
-    public GameObject groundCheck = null;
+    public bool grounded = true; // set grounded as true
+    public GameObject groundCheck = null; // gcheck is null
     public bool hott = false; // bool to check if he is on hot pf
 
     public GameObject panel1;
@@ -27,7 +27,7 @@ public class Move : MonoBehaviour
         panel1.gameObject.SetActive(false);
         panel2.gameObject.SetActive(false);
         Text.gameObject.SetActive(true);
-    }
+    } // set up the panel to communicate with players
 
     // Update is called once per frame
     void Update()
@@ -89,14 +89,14 @@ public class Move : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Death")
+        if (collision.gameObject.tag == "Death") // collide with lava or dragon
         {
             Destroy(gameObject);
             Debug.Log("Hit");
             panel1.gameObject.SetActive(true);
             Text.gameObject.SetActive(false);
         }
-        else if (collision.gameObject.tag == "Win")
+        else if (collision.gameObject.tag == "Win") // collide with the aegis
         {
             Time.timeScale = 0;
             panel2.gameObject.SetActive(true);

@@ -14,6 +14,6 @@ public class GM : MonoBehaviour
     // Update is called once per frame
     public void Restart()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene"); // restart
     }
 }

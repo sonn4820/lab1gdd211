@@ -13,6 +13,6 @@ public class Dragon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(2.2f, 0f);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(2.2f, 0f); // make the dragon move
     }
 }
